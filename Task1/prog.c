@@ -4,7 +4,7 @@
 #define C 4.29e-13
 
 double phi (double x, int alpha) {
-  return log( cosh((1. / alpha) + 1. / ((1 + cos (x) * cos(x)) * (1 + cos (x) * cos(x)))  )  ) - log(alpha);
+  return log( cosh(((1.) / alpha) + ((1.) / ((1 + cos (x) * cos(x))  ))  )) - log(alpha);
 }
 
 int main(void) {
