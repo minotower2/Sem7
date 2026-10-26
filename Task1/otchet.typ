@@ -2,6 +2,7 @@
 #set text(lang: "ru", size: 11pt)
 #set par(justify: true)
 #set heading(numbering: "1.")
+#show link: underline
 
 #align(center)[
   Московский государственный университет имени М.В.Ломоносова \
@@ -100,5 +101,5 @@ $
 = Приложения
 #v(1cm)
 
-Код программы доступен по ссылке на google-colab (там можно запустить программу
-и посмотреть графики функции $y(x)$).
+Код программы доступен по ссылке
+#link("https://raw.githubusercontent.com/minotower2/Sem7/refs/heads/main/Task1/prog.c")
