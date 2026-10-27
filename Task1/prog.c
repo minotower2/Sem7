@@ -16,7 +16,7 @@ int main(void) {
       x = phi(x, i);
       y = phi(y, i);
     }
-    printf("alpha = %d, x =  %lf\n", i, y);
+    printf("alpha = %d, x = %10.12e\n", i, y);
     
   }
   return 0;
