@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#define ALPHA (0.2)
+#define ALPHA (-0.2)
 
 
 double f_x(double t, double  x, double  v) {
@@ -19,7 +19,7 @@ int main(int argc, char ** argv) {
   double v = 0;
   double end_time = 0;
   double t = 0;
-  double h = 0.001;
+  double h = 0.0001;
   double half = h/2;
   double sixth = h/6;
   double k1_x, k2_x, k3_x, k4_x;

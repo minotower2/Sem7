@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#define ALPHA (0.2)
+#define ALPHA (-0.2)
 #define H 0.0001
 #define EPSILON 1e-12
 #define EPS 1e-7
