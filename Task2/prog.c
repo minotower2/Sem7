@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 
-#define ALPHA (-0.2)
+#define ALPHA (0.2)
 
 
 double f_x(double t, double  x, double  v) {
@@ -43,10 +43,16 @@ int main(int argc, char ** argv) {
   }
 
 
-  fprintf(fp, "%lf %lf\n", t, x);
+  fprintf(fp, "%.12f %.12f\n", t, x);
 
   while(t < end_time) {
-    
+
+    if (t + h > end_time) {
+      h = end_time - t;
+      half = h/2;
+      sixth = h/6;
+    }
+
     k1_x = f_x(t, x, v);
     k1_y = f_y(t, x, v);
 
@@ -62,7 +68,7 @@ int main(int argc, char ** argv) {
     x += sixth * (k1_x + 2 * k2_x + 2 * k3_x + k4_x);
     v += sixth * (k1_y + 2 * k2_y + 2 * k3_y + k4_y);
 
-    fprintf(fp, "%lf %lf\n", t, x);
+    fprintf(fp, "%.12f %.12f\n", t, x);
     t += h;
   }
 
